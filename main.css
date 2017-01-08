@@ -1,0 +1,42 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	background: #DDDDDD
+}
+
+@font-face{
+	font-family:monterey;
+	src:url('fonts/monterey/MontereyFLF.ttf');
+}
+
+#the_canvas{
+	border: 1px solid black;
+}
+
+h1{
+	font-family:monterey;
+	font-size: 20px;
+	margin:25px;
+}
+
+#link{
+	font-family:monterey;
+	font-size: 15px;}
+
+body{
+	text-align: center;
+}
+
+#big_wrapper{
+	border: 1px solid black;
+	width:90vw;
+	margin: 20px auto;
+	text-align: center;
+}
+
+#the_footer{
+	font-family:monterey;
+	font-size: 20px;
+	text-align:center;
+	margin: 25px;
+}
