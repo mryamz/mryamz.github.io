@@ -61,3 +61,9 @@ h1 {
 	font-family: micross;
 	padding: 10px 12px;
 }
+
+#element_list .element .play_video{
+    font-family: micross;
+	padding-left: 10px;
+	padding-top: 10px;
+}
