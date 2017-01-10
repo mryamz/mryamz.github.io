@@ -1,0 +1,63 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	background: #9ce0ff;
+	
+}
+
+@font-face{
+	font-family: micross;
+	src:url('fonts/micross.ttf');
+}
+
+h1 {
+	font-family: micross;
+}
+
+#canvas_banner {
+	padding-bottom: 32px;
+}
+
+#element_list {
+    max-width: 1200px;
+    margin: 0px auto;
+	display: block;
+}
+
+#element_list .element {
+    float: left;
+    position: relative;
+    width: 200px;
+    height: 270px;
+    padding-left: 360px;
+    margin: 0px 20px 40px;
+    box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.5);
+
+}
+
+#element_list .element .image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 360px;
+    height: 270px;
+}
+
+#element_list .element .title {
+    width: 176px;
+    padding: 10px 12px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+#element_list .element .description {
+    width: 176px;
+    padding: 0px 12px 10px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#element_list .element .play_link {
+	font-family: micross;
+	padding: 10px 12px;
+}

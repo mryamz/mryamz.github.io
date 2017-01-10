@@ -1,23 +1,38 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-	<meta charset=utf-8/>
-	<title>HTML5</title>
-	<link rel="stylesheet" href="main.css"/>
-	<script src="something.js"> </script>
+	
+    <script src="js/banner/banner.js"></script>
+    <script src="js/banner/particle.js"></script>
+	<script src="js/banner/particle_manager.js"></script>
+	<script src="js/utils/utils.js"></script>
+
+    <link rel="stylesheet" href="styles/main.css"/>
 </head>
 <body>
-	<div id="big_wrapper">
-			<h1>Index 1</h1>
-		<canvas id="the_canvas" width=500 height=500> </canvas>
-		
+    <div id="wrapper_major">
 		<center>
-			<a id="link" href="Lumber_Jack/index.html">Weird Lumber_Jack Test</a>
+			<canvas id=canvas_banner height="310cm"></canvas>
 		</center>
 		
-		<footer id="the_footer">
-			<p1>(2017)</p1>
-		</footer>
-	</div>
+		<div id="element_list">
+			<div class="element">
+				<div class="image">
+					<img src="images/element_pics/lumber_jack.PNG">
+				</div>
+				<div class="title">
+					<p>Test Icon</p>
+				</div>
+				<div class="description">
+					<p>This is a crappy Javascript application.</p>
+				</div>
+				
+				<a class="play_link" href="pages/Lumber_Jack/index.html">Play in Browser</a>
+
+			</div>
+		</div>
+		
+    </div>
 </body>
 </html>
