@@ -1,7 +1,7 @@
 *{
 	margin: 0px;
 	padding: 0px;
-	background: #9ce0ff;
+	background: #ddf1fa;
 	
 }
 
@@ -15,10 +15,11 @@ h1 {
 }
 
 #canvas_banner {
-	padding-bottom: 32px;
+	border-bottom: solid 6px #ffffff;
 }
 
 #element_list {
+	padding-top: 32px;
     max-width: 1200px;
     margin: 0px auto;
 	display: block;
