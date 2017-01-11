@@ -6,12 +6,21 @@
 }
 
 @font-face{
-	font-family: micross;
-	src:url('fonts/micross.ttf');
+	font-family:micross;
+	src:url('fonts/sansation.ttf');
 }
 
-h1 {
-	font-family: micross;
+p{
+	font-family:micross;
+}
+
+#copy_write{
+	clear: both;
+	width: 100vw;
+	text-align: center;
+	bottom: 5px;
+	background: white;
+
 }
 
 #canvas_banner {
