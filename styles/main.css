@@ -48,6 +48,14 @@ p{
 	
 }
 
+#state_display {
+	text-align: center;
+}
+
+#state_display p {
+	font-size: 32px;
+}
+
 #main_menu .menu_list a:hover {
 	text-decoration: none;
 	background-color: #ff0000;
