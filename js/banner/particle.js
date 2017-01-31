@@ -19,6 +19,10 @@ function Particle(x, y, angleDeg, speed, exitHeight, size){
 	
 	img.src = "images/banner/snowflake.png";
 	
+	img.onerror = function(){
+			img.src = "../images/banner/snowflake.png";
+	};
+	
 	this.draw = function(context){
 		var elapsed = new Date().getTime() - init;
 		var xOff = Math.cos(Math.PI * elapsed / period);

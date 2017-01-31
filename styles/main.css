@@ -23,10 +23,72 @@ p{
 
 }
 
-#canvas_banner {
-	border-bottom: solid 6px #ffffff;
+/*Main Menu Styles*/
+
+#main_menu .menu_list {
+	width: 100vw;
+	height: 100px;
+	text-align: center;
+	background: #505050;
 }
 
+#main_menu .menu_list li {
+	display: inline;
+	line-height: 75px;
+	margin: 5px 50px 5px 50px;
+	background: #FFFFFF;
+	border-bottom: solid 6px #F5F5F5;
+	border-radius: 6px;
+}
+
+#main_menu .menu_list a {
+	color: white;
+	text-decoration: none;
+	background-color: #505050;
+	
+}
+
+#main_menu .menu_list a:hover {
+	text-decoration: none;
+	background-color: #ff0000;
+	border-bottom: solid 6px #F5F5F5;
+	border-radius: 6px;
+}
+
+/*JS Canvas*/
+#canvas_banner {
+	border-bottom: solid 9px #ffffff;
+	border-top: solid 9px #808080;
+}
+
+/*Bio Style*/
+#bio {
+	width: 750px;
+    height: 300px;
+    box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.65);
+	margin-bottom: 30px;
+	margin-top: 30px;
+	background-color: #F2F2F2;
+}
+
+#bio .title_div .title {
+	background-color: #FFFFFF;
+	font-size: 35px;
+    box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.35);
+	width: 675px;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+
+#bio .title_div .words {
+	float: left;
+	margin-top: 25px;
+	margin-left: 25px;
+	background-color: #F2F2F2; 
+    font-size: 24;
+}
+
+/*Software Showcase Style*/
 #element_list {
 	padding-top: 32px;
     max-width: 1200px;
