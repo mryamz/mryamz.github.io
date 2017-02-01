@@ -50,10 +50,13 @@ p{
 
 #state_display {
 	text-align: center;
+    box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.65);
+	margin-top: 14px;
 }
 
 #state_display p {
 	font-size: 32px;
+	background-color: white;
 }
 
 #main_menu .menu_list a:hover {
@@ -72,28 +75,58 @@ p{
 /*Bio Style*/
 #bio {
 	width: 750px;
-    height: 300px;
+    height: 550px;
     box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.65);
 	margin-bottom: 30px;
 	margin-top: 30px;
 	background-color: #F2F2F2;
+	text-align: left;
 }
 
 #bio .title_div .title {
+	text-align: center;
 	background-color: #FFFFFF;
 	font-size: 35px;
     box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.35);
-	width: 675px;
-	margin-left: 15px;
 	margin-top: 15px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 }
 
 #bio .title_div .words {
-	float: left;
-	margin-top: 25px;
-	margin-left: 25px;
 	background-color: #F2F2F2; 
     font-size: 24;
+	padding-left: 42px;
+	padding-top: 22px;
+}
+
+#bio .title_div .words li {
+	background-color: #F2F2F2; 
+	margin-top: 15px;
+}
+
+/*Contact Style*/
+#contact {
+	margin-top: 29px;
+	margin-bottom: 20px;
+	width: 750px;
+	background-color: #FFFFFF;
+    box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.65);
+}
+
+#contact .title_div{
+	padding-top: 7px;
+	padding-bottom: 7px;
+	text-align: center;
+	font-size: 35px;
+    box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.65);
+}
+
+#contact .contact_info{
+	text-align: left;
+	font-size: 19px;
+	padding-left: 25px;
+	padding-bottom: 25px;
 }
 
 /*Software Showcase Style*/
@@ -101,6 +134,7 @@ p{
 	padding-top: 32px;
     max-width: 1200px;
     margin: 0px auto;
+	margin-top: 24px;
 	display: block;
 }
 
