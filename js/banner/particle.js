@@ -3,13 +3,15 @@ function Particle(x, y, angleDeg, speed, exitHeight, size){
 	
 	this.x = x;
 	this.y = y;
-	this.exitHeight = exitHeight;
+	this.exitHeight = exitHeight + 50;
 	this.angleDeg = angleDeg;
 	
 	angleDeg = angleDeg / 180 * Math.PI;
 	
 	var vx = Math.cos(angleDeg) * speed;
 	var vy = Math.sin(angleDeg) * speed;
+	
+	var scrollXSpeed = 0;
 	
 	var init = new Date().getTime();
 	var period = Math.randomRange(3000, 5000);
@@ -29,7 +31,7 @@ function Particle(x, y, angleDeg, speed, exitHeight, size){
 		
 		angle++;
 		
-		x += vx + xOff;
+		x += vx + xOff + scrollXSpeed;
 		y += vy;
 			
 		context.save();
