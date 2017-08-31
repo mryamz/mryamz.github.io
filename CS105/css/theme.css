@@ -1,0 +1,75 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.main_wrapper {
+	width: 50%;
+	font-family: sansation;
+}
+
+.main_wrapper h1 {
+	text-align: center;
+	font-size: 56;
+}
+
+#main_nav_bar {
+	list-style-type: none;
+	background-color: #393939;
+	width: 100%;
+	border-bottom: 5px solid #ff001f;
+	font-family: sansation;
+}
+
+
+#main_nav_bar li {
+	text-align: center;
+	display: inline-block;
+	background-color: #525252;
+	color: #ffffff;
+	width: 90px;
+	line-height: 70px;
+}
+
+#main_nav_bar li:first-child {
+	margin-right: 30px;
+	background-color: #393939;
+	color: #ffffff;
+	font-size: 45;
+	border: 2px none rgba(255, 255, 255, 0);
+	width: 160px;
+}
+
+#main_nav_bar li:hover {
+	background-color: #ff001f;
+	color: #FFFFFF;
+}
+
+a:hover, a:visited, a:link, a:active {
+	color: #c4c4c4;
+    text-decoration: none;
+}
+
+#game_list {
+	list-style-type: none;
+	width: 150px;
+	box-shadow: -1px -1px 9px rgba(0, 0, 0, 0.6);
+	height: 100%;
+}
+
+#game_list li {
+	display: inline-block;
+	width: 140px;
+	line-height: 50px;
+	margin-top: 10px;
+	padding-left: 10px;
+}
+
+#game_list li:hover{
+	box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.8);
+}
+
+@font-face{
+	font-family: sansation;
+	src: url("../../fonts/sansation.ttf");
+}

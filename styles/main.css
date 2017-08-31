@@ -6,8 +6,8 @@
 }
 
 @font-face{
-	font-family:micross;
-	src:url('fonts/sansation.ttf');
+	font-family: micross;
+	src: url("../fonts/micross.ttf");
 }
 
 p{
