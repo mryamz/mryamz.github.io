@@ -10,7 +10,7 @@
 
 .main_wrapper h1 {
 	text-align: center;
-	font-size: 56;
+	font-size: 66px;
 }
 
 #main_nav_bar {
@@ -50,22 +50,24 @@ a:hover, a:visited, a:link, a:active {
     text-decoration: none;
 }
 
-#game_list {
+.option_list {
+	position: fixed;
+	top: 77px;
 	list-style-type: none;
-	width: 150px;
+	width: 350px;
 	box-shadow: -1px -1px 9px rgba(0, 0, 0, 0.6);
 	height: 100%;
 }
 
-#game_list li {
+.option_list li {
 	display: inline-block;
-	width: 140px;
+	width: 340px;
 	line-height: 50px;
 	margin-top: 10px;
 	padding-left: 10px;
 }
 
-#game_list li:hover{
+.option_list li:hover{
 	box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.8);
 }
 
