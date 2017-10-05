@@ -1,0 +1,124 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../../js/common-code-includes.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			var alphabet = {1 : "a",
+							2 : "b",
+							3 : "c",
+							4 : "d",
+							5 : "e",
+							6 : "f",
+							7 : "g",
+							8 : "h",
+							9 : "i",
+							10 : "j",
+							11 : "k",
+							12 : "l",
+							13 : "m",
+							14 : "n",
+							15 : "o",
+							16 : "p",
+							17 : "q",
+							18 : "r",
+							19 : "s",
+							20 : "t",
+							21 : "u",
+							22 : "v",
+							23 : "w",
+							24 : "x",
+							25 : "y",
+							26 : "z"};
+			
+			
+			
+			var e_shift_input = $('#ceasar-shift-encrypt');
+			var e_plaintext_input = $('#ceasar-plaintext-encrypt');
+			var e_cipher_output = $('#ceasar-ciphertext-encrypt');
+			var e_refresh_button = $('#refresh_ciphertext-encrypt');
+			
+			e_refresh_button.click(function() {
+				var shift = e_shift_input.val()-1;
+				var shiftedAlphabet = {};
+				var shiftedAlphabetReverse = {};
+				for(var i = 1; i < 27; i++) {
+					shiftedAlphabet[((i + Number(shift)) % 26)+1] = alphabet[i];
+					shiftedAlphabetReverse[alphabet[i]] = ((i + Number(shift)) % 26)+1;
+				}
+				
+				var plaintext = e_plaintext_input.val().toLowerCase().split("");
+				var ciphertext = "";
+				for(var i = 0; i < plaintext.length; i++) {
+					if(plaintext[i] === " ") {
+						ciphertext += " ";
+						continue;
+					}
+					
+					ciphertext += alphabet[shiftedAlphabetReverse[plaintext[i]]];
+				}
+				e_cipher_output.val(ciphertext);
+				console.log(JSON.stringify(shiftedAlphabet, null, 4));
+			});
+			
+			var d_shift_input = $('#ceasar-shift-decrypt');
+			var d_plaintext_input = $('#ceasar-plaintext-decrypt');
+			var d_cipher_output = $('#ceasar-ciphertext-decrypt');
+			var d_refresh_button = $('#refresh_ciphertext-decrypt');
+			
+			d_refresh_button.click(function() {
+				
+			});
+		});
+	</script>
+	
+	<link rel="stylesheet" href="../../css/theme.css"/>
+</head>
+<body>
+	
+	<center>
+		<div class="main_wrapper">
+			<h1>The Caesar Cipher</h1>
+			<p><i>"Try It"</i></p>
+		</div>
+	</center>
+	
+	<div class="centeral-div">
+		<h1>Encrypt</h1>
+		<p>Shift Value</p>
+		<textarea id="ceasar-shift-encrypt" style="width: 100%; height: 20px;">5</textarea>
+		
+		<p>Plaintext <i>Use only letters.</i></p>
+		<textarea id="ceasar-plaintext-encrypt" style="width: 100%; height: 75px;">hello</textarea>
+		
+		<p>Ciphertext</p>
+		<textarea id="ceasar-ciphertext-encrypt" style="width: 100%; height: 75px;">mjqqt</textarea>
+		
+		<center><button id="refresh_ciphertext-encrypt" style="width: 25%; height: 30px; margin-top: 15px;">Encrypt Plaintext</button></center>
+		
+	</div>
+	
+	<div class="centeral-div" style="padding-bottom: 250px;">
+		<h1>Decrypt <i></i></h1>
+		<p>Shift Value</p>
+		<textarea id="ceasar-shift-decrypt" style="width: 100%; height: 20px;">5</textarea>
+		
+		<p>Ciphertext</p>
+		<textarea id="ceasar-ciphertext-decrypt " style="width: 100%; height: 75px;">mjqqt</textarea>
+		
+		<p>Plaintext</p>
+		<textarea id="ceasar-plaintext-decrypt" style="width: 100%; height: 75px;">hello</textarea>
+		
+		<center><button id="refresh_ciphertext-decrypt" style="width: 25%; height: 30px; margin-top: 15px;">Decrypt Ciphertext (is yet to work)</button></center>
+		
+	</div>
+	
+	<ul class="option_list">
+			<li><a href="encryption.html">Encryption Home Page</a></li>
+			<li><a href="encryption-technique.html">Encryption Technique Page</a></li>
+			<li><a href="encryption-try-it.html">Encryption Try It Page</a></li>
+			<li><a href="encryption-reffs.html">Encrytpion Reference Page</a></li>
+	</ul>
+</body>
+</html>
