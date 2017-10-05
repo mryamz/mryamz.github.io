@@ -40,7 +40,11 @@
 			var e_refresh_button = $('#refresh_ciphertext-encrypt');
 			
 			e_refresh_button.click(function() {
-				var shift = e_shift_input.val()-1;
+				var shift = e_shift_input.val().trim()-1;
+				e_shift_input.val(shift+1);
+				if(shift < 0) {
+					shift += 26;
+				}
 				var shiftedAlphabet = {};
 				var shiftedAlphabetReverse = {};
 				for(var i = 1; i < 27; i++) {
@@ -59,7 +63,6 @@
 					ciphertext += alphabet[shiftedAlphabetReverse[plaintext[i]]];
 				}
 				e_cipher_output.val(ciphertext);
-				console.log(JSON.stringify(shiftedAlphabet, null, 4));
 			});
 			
 			var d_shift_input = $('#ceasar-shift-decrypt');
@@ -68,7 +71,29 @@
 			var d_refresh_button = $('#refresh_ciphertext-decrypt');
 			
 			d_refresh_button.click(function() {
+				var shift = "-" + d_shift_input.val().trim()-1;
+				d_shift_input.val(Math.abs(shift+1));
+				if(shift < 0) {
+					shift += 26;
+				}
 				
+				var shiftedAlphabet = {};
+				var shiftedAlphabetReverse = {};
+				for(var i = 1; i < 27; i++) {
+					shiftedAlphabet[((i + Number(shift)) % 26)+1] = alphabet[i];
+					shiftedAlphabetReverse[alphabet[i]] = ((i + Number(shift)) % 26)+1;
+				}
+				var ciphertext = d_cipher_output.val().toLowerCase().split("");
+				var plaintext = "";
+				for(var i = 0; i < ciphertext.length; i++) {
+					if(ciphertext[i] === " ") {
+						plaintext += " ";
+						continue;
+					}
+					
+					plaintext += alphabet[shiftedAlphabetReverse[ciphertext[i]]];
+				}
+				d_plaintext_input.val(plaintext);
 			});
 		});
 	</script>
@@ -86,13 +111,13 @@
 	
 	<div class="centeral-div">
 		<h1>Encrypt</h1>
-		<p>Shift Value</p>
-		<textarea id="ceasar-shift-encrypt" style="width: 100%; height: 20px;">5</textarea>
+		<p>Shift Value [-26, 26]</p>
+		<textarea id="ceasar-shift-encrypt" style="width: 100%; height: 40px;">5</textarea>
 		
-		<p>Plaintext <i>Use only letters.</i></p>
+		<p>Plaintext <i>use only letters and spaces.</i></p>
 		<textarea id="ceasar-plaintext-encrypt" style="width: 100%; height: 75px;">hello</textarea>
 		
-		<p>Ciphertext</p>
+		<p>Ciphertext <b>output</b></p>
 		<textarea id="ceasar-ciphertext-encrypt" style="width: 100%; height: 75px;">mjqqt</textarea>
 		
 		<center><button id="refresh_ciphertext-encrypt" style="width: 25%; height: 30px; margin-top: 15px;">Encrypt Plaintext</button></center>
@@ -101,16 +126,16 @@
 	
 	<div class="centeral-div" style="padding-bottom: 250px;">
 		<h1>Decrypt <i></i></h1>
-		<p>Shift Value</p>
-		<textarea id="ceasar-shift-decrypt" style="width: 100%; height: 20px;">5</textarea>
+		<p>Shift Value [-26, 26]</p>
+		<textarea id="ceasar-shift-decrypt" style="width: 100%; height: 40px;">5</textarea>
 		
-		<p>Ciphertext</p>
-		<textarea id="ceasar-ciphertext-decrypt " style="width: 100%; height: 75px;">mjqqt</textarea>
+		<p>Ciphertext <i>use only letters and spaces.</i></p>
+		<textarea id="ceasar-ciphertext-decrypt" style="width: 100%; height: 75px;">mjqqt</textarea>
 		
-		<p>Plaintext</p>
+		<p>Plaintext <b>output</b></p>
 		<textarea id="ceasar-plaintext-decrypt" style="width: 100%; height: 75px;">hello</textarea>
 		
-		<center><button id="refresh_ciphertext-decrypt" style="width: 25%; height: 30px; margin-top: 15px;">Decrypt Ciphertext (is yet to work)</button></center>
+		<center><button id="refresh_ciphertext-decrypt" style="width: 25%; height: 30px; margin-top: 15px;">Decrypt Ciphertext</button></center>
 		
 	</div>
 	
