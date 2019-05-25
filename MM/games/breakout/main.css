@@ -1,0 +1,41 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.draw_breakout {
+	position: absolute;
+	left: 25%;
+	right: 25%;
+	top: 10%;
+	
+	border-radius: 25px;
+}
+
+#canvas1 {
+	z-index: 0;
+}
+
+#canvas2 {
+	z-index: 1;
+	box-shadow: 1px 1px 3px 1px gray;
+}
+
+.draw_hud {
+	position: absolute;
+	left: 24%;
+	right: 25%;
+	top: 74%;
+	box-shadow: 1px 1px 3px 1px gray;
+	border-radius: 25px;
+	text-align: center;
+	
+}
+
+.draw_hud span p {
+	display: inline-block;
+}
+
+.draw_hud p {
+	margin-left: 20px;
+}
