@@ -3,6 +3,7 @@ var particles = new Array(0);
 var particleManager = {	
 	
 	height: 0,
+	sizeofParticle: 32,
 	
 	init: function(pSize, height){
 		this.height = height;
@@ -28,11 +29,11 @@ var particleManager = {
 		var side1 = this.height;
 		var x = Math.tan(angle) * side1;
 		particles.push(new Particle(Math.randomRange(-x, Math.max(document.documentElement.clientWidth),
-															 window.innerWidth || 0), -32, 45, Math.randomRange(1, 2.5), this.height, Math.randomRange(16, 32)));
+															 window.innerWidth || 0), -this.sizeofParticle, 45, Math.randomRange(1, 2.5), this.height + this.sizeofParticle / 2, Math.randomRange(16, 32)));
 	},
 	
 	addInit: function() {
 		particles.push(new Particle(Math.random() * Math.max(document.documentElement.clientWidth,
-															 window.innerWidth || 0), Math.randomRange(-32, this.height), 45, Math.randomRange(1, 2.5), this.height, Math.randomRange(16, 32)));
+															 window.innerWidth || 0), Math.randomRange(-this.sizeofParticle, this.height), 45, Math.randomRange(1, 2.5), this.height + this.sizeofParticle / 2, Math.randomRange(16, 32)));
 	}
 };

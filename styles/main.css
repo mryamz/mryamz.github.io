@@ -6,8 +6,8 @@
 }
 
 @font-face{
-	font-family:micross;
-	src:url('fonts/sansation.ttf');
+	font-family: micross;
+	src: url("../fonts/micross.ttf");
 }
 
 p{
@@ -23,14 +23,127 @@ p{
 
 }
 
-#canvas_banner {
-	border-bottom: solid 6px #ffffff;
+/*Main Menu Styles*/
+
+#main_menu .menu_list {
+	width: 100vw;
+	height: 100px;
+	text-align: center;
+	background: #505050;
 }
 
+#main_menu .menu_list li {
+	display: inline;
+	line-height: 75px;
+	margin: 5px 50px 5px 50px;
+	background: #FFFFFF;
+	border-bottom: solid 6px #F5F5F5;
+	border-radius: 6px;
+}
+
+#main_menu .menu_list a {
+	color: white;
+	text-decoration: none;
+	background-color: #505050;
+	
+}
+
+#state_display {
+	text-align: center;
+    box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.65);
+	margin-top: 14px;
+}
+
+#state_display p {
+	font-size: 32px;
+	background-color: white;
+}
+
+#main_menu .menu_list a:hover {
+	text-decoration: none;
+	background-color: #ff0000;
+	border-bottom: solid 6px #F5F5F5;
+	border-radius: 6px;
+}
+
+/*JS Canvas*/
+#canvas_banner {
+	border-bottom: solid 9px #ffffff;
+	border-top: solid 9px #808080;
+}
+
+/*forms*/
+
+#beta_btn {
+	margin: 5px 5px 5px 5px;
+	padding: 5px 5px 5px 5px;
+}
+
+
+/*Bio Style*/
+#bio {
+	width: 750px;
+    height: 550px;
+    box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.65);
+	margin-bottom: 30px;
+	margin-top: 30px;
+	background-color: #F2F2F2;
+	text-align: left;
+}
+
+#bio .title_div .title {
+	text-align: center;
+	background-color: #FFFFFF;
+	font-size: 35px;
+    box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.35);
+	margin-top: 15px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+#bio .title_div .words {
+	background-color: #F2F2F2; 
+    font-size: 24;
+	padding-left: 42px;
+	padding-top: 22px;
+}
+
+#bio .title_div .words li {
+	background-color: #F2F2F2; 
+	margin-top: 15px;
+}
+
+/*Contact Style*/
+#contact {
+	margin-top: 29px;
+	margin-bottom: 20px;
+	width: 750px;
+	background-color: #FFFFFF;
+    box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.65);
+}
+
+#contact .title_div{
+	padding-top: 7px;
+	padding-bottom: 7px;
+	text-align: center;
+	font-size: 35px;
+    box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.65);
+}
+
+#contact .contact_info{
+	text-align: left;
+	font-size: 19px;
+	padding-left: 25px;
+	padding-bottom: 25px;
+}
+
+/*Software Showcase Style*/
 #element_list {
 	padding-top: 32px;
     max-width: 1200px;
     margin: 0px auto;
+	margin-top: 24px;
+
 	display: block;
 }
 
@@ -48,7 +161,6 @@ p{
     padding-left: 360px;
     margin: 0px 20px 40px;
     box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.5);
-
 }
 
 #element_list .element .image {
@@ -75,7 +187,7 @@ p{
 
 #element_list .element .play_link {
 	font-family: micross;
-	padding: 10px 12px;
+	margin: 10px 12px;
 }
 
 #element_list .element .play_video{

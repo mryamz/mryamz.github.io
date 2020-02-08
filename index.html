@@ -3,61 +3,273 @@
 <html>
 <head>
 	<title>mryamz</title>
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/banner/banner.js"></script>
     <script src="js/banner/particle.js"></script>
 	<script src="js/banner/particle_manager.js"></script>
 	<script src="js/utils/utils.js"></script>
 	<script src="js/on_event/on_event.js"></script>
+	<script src="js/anims/anims.js"></script>
 
 	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-90214523-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-90214523-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 	
     <link rel="stylesheet" href="styles/main.css"/>
 </head>
 <body>
     <div id="wrapper_major">
+		
+		<nav id="main_menu">
+			<ul class="menu_list">
+				<li><a href="index.html">Desktop Apps</a></li>
+				<li><a href="pages/androidapps.html">Android Apps</a></li>
+				<li><a href="pages/aboutme.html">About Me</a></li>
+			</ul>
+		</nav>
+		
+		<!--CANVAS-->
 		<center>
 			<canvas id=canvas_banner height="310cm"></canvas>
 		</center>
 		
-		<div id="p_store_list">
-			<div class="p_element">
-				<div class="p_img">
-				
-				</div>
+		<div id="state_display"><p>Browse Desktop Applications </p><button id="beta_btn">Enable site's beta mode</button></div>
+		
+		<!--Populate Element List-->
+		<div id="element_list">
+			<div class="element">
+				<div class="image">
+						<img src="images/element_pics/chessengine.png">
+					</div>
+					<div class="title">
+						<p>Chess Engine</p>
+					</div>
+					<div class="description">
+						<p>Play against an AI that has been trained using a genetic algorithm</p>
+						<p>One may edit genes at runtime, and even view a heatmap of the chess board in realtime</p>
+					</div>
+					
+					<a class="play_link" href="downloads/chessEngine.zip">Download</a>
 			</div>
+			
+			<div class="element">
+				<div class="image">
+						<img src="images/element_pics/n_dir_color_grad.png">
+					</div>
+					<div class="title">
+						<p>Multidirectional Color Gradient</p>
+					</div>
+					<div class="description">
+						<p>In pursuit of a heat map algorithm for my chess engine, I stumbled onto this and decided to dev it a bit. One can generate abstract looking art very simply, great for high-res procedurally generated wallpaper</p>
+					</div>
+					
+					<a class="play_link" href="downloads/ColorGrad.jar">Download</a>
+			</div>
+			
+		<div class="element">
+			<div class="image">
+					<img src="images/element_pics/pgb_ic.png">
+				</div>
+				<div class="title">
+					<p>Polygon Builder</p>
+				</div>
+				<div class="description">
+					<p>Version v0.0.6</p>
+					<p>Build Polygons and load them up in libGDX.</p>
+					<p>This comes with the dev tool. It also comes with a small parser (as a Java class) that builds the program's output into polygons.</p>
+				</div>
+				
+				<a class="play_link" href="downloads/PolygonBuilder.zip">Download</a>
+			</div>
+
+			<div class="element">
+				<div class="image">
+					<img src="images/element_pics/endlessGenT.png">
+				</div>
+				<div class="title">
+					<p>Procedural Terrain Generation</p>
+				</div>
+				<div class="description">
+					<p>Version v0.0.1</p>
+					<p>Generates Terrain by generating a mesh from an optimized Perlin Noise algorithm that is sent through an OpenGL shader program. Run software simply from any eclipse project.</p>
+				</div>
+				
+				<a class="play_link" href="downloads/TerrainGeneration.zip">Download</a>
+			</div>
+<<<<<<< HEAD
 		</div>
 		
 		<div id="element_list">
 		
 			<p class="list_title">Apps</p>
 		
+=======
+			
+>>>>>>> origin/master
 			<div class="element">
 				<div class="image">
-					<img src="images/element_pics/b2dSim.PNG">
+					<img src="images/element_pics/mbs_pic.png">
 				</div>
 				<div class="title">
-					<p>Friction Simulation</p>
+					<p>The Madlebrot Set</p>
 				</div>
 				<div class="description">
-					<p>A LWJGL friction simulation mixed with java.swing.*</p>
+					<p>Version v0.0.1</p>
+					<p>In this lagging program, zoom, pan and view the madlebrot set being updated and rendered in realtime.</p>
 				</div>
 				
-				<a class="play_link" href="downloads/friction_sim.jar">Play by Download</a>
+				<a class="play_link" href="downloads/MBS.jar">Download</a>
+			</div>
+			
+			<div class="element">
+				<div class="image">
+					<img src="images/element_pics/ld38.png">
+				</div>
+				<div class="title">
+					<p>Under The Petri Dish (LD38)</p>
+				</div>
+				<div class="description">
+					<p>Fight as an army of white blood cells in a petri dish as cancer tries to invade you. You can move and attack each cell once per turn. Collect items and rank up your cells along the way. Will you beat the cancer in this small world?</p>
+				</div>
 				
+				<a class="play_link" href="downloads/Ludum_Dare_38.jar">Download</a>
+			</div>
+			
+			<div class="element">
+				<div class="image">
+					<img src="images/element_pics/ld39.png">
+				</div>
+				<div class="title">
+					<p>Power Savage (LD39)</p>
+				</div>
+				<div class="description">
+					<p>Grow your storm as you collect water and dodge sun rays. After your storm is big as can be, commit havoc to the city’s power for you are the storm.</p>
+				</div>
+				
+				<a class="play_link" href="downloads/LD39.jar">Download</a>
+			</div>
+			
+			<div class="element">
+				<div class="image">
+					<img src="images/element_pics/spiralg.png">
+				</div>
+				<div class="title">
+					<p>Spirograph</p>
+				</div>
+				<div class="description">
+					<p>Version v0.1.0</p>
+					<p>Want to make and export amazing spirographs? Select the color of your liking with a fancy color wheel :)</p>
+				</div>
+				
+				<a class="play_link" href="downloads/Spirograph.jar">Download</a>
+			</div>
+			
+			<div class="element">
+				<div class="image">
+					<img src="images/element_pics/seepic.png">
+				</div>
+				<div class="title">
+					<p>Scorched Earth</p>
+				</div>
+				<div class="description">
+					<p>Version v0.4.0</p>
+					<p>This is a work in progress clone of the original Scorched Earth game. Programmed from scratch in Java. The napalms still don't do anything. The lan-party multiplayer is still comming soon too.</p>
+				</div>
+				
+				<a class="play_link" href="downloads/Scorched%20Earth.jar">Download</a>
+			</div>
+			
+						
+			<div class="element">
+				<div class="image">
+					<img src="images/element_pics/br_element.PNG">
+				</div>
+				<div class="title">
+					<p>Circle Breakout</p>
+				</div>
+				<div class="description">
+					<p>Version v0.0.3</p>
+					<p>A circlular twist of breakout. Still in the works</p>
+				</div>
+				
+				<a class="play_link" href="games/breakout/index.html">Play in Browser</a>
+			</div>
+			
+			<div class="element">
+				<div class="image">
+					<img src="images/element_pics/aud_mkr.png">
+				</div>
+				<div class="title">
+					<p>Audio Maker</p>
+				</div>
+				<div class="description">
+					<p>Version v0.0.4</p>
+					<p>Create and build nearly any sound possible sounds by adding sinwaves. Phase-shifting the sines isn't yet suppported.</p>
+				</div>
+				
+				<a class="play_link" href="downloads/RawPCM_Player.jar">Download</a>
+			</div>
+			
+						
+			<div class="element">
+				<div class="image">
+					<img src="images/element_pics/simplix-terrain-branch.png">
+				</div>
+				<div class="title">
+					<p>1D Simplix Noise</p>
+				</div>
+				<div class="description">
+					<p>Version v0.0.4</p>
+					<p>I built this software while building the terrain generation for Scorched Earth. I thought it was neet so I branched off this mini project.</p>
+				</div>
+				
+				<a class="play_link" href="downloads/Simplix-Earth-Branch.jar">Download</a>
+			</div>
+			
+			
+			<div class="element">
+				<div class="image">
+					<img src="images/element_pics/server-client.png">
+				</div>
+				<div class="title">
+					<p>Chat System</p>
+				</div>
+				<div class="description">
+					<p>Version v0.2.1</p>
+					<p>This is a chat program (an older version) built with Java Swing and Net. The server must be portforwarded if a WAN is required.</p>
+				</div>
+				
+				<a class="play_link" href="downloads/ClientSide.jar">Download Server</a>
+				<a class="play_link" href="downloads/ServerSide.jar">Download Client</a>
+			</div>
+			
+			<!--Second Element-->			
+			<div class="element">
+				<div class="image">
+					<img src="images/element_pics/dtt.png">
+				</div>
+				<div class="title">
+					<p>Armored Train Game</p>
+				</div>
+				<div class="description">
+					<p>Version v0.1.5</p>
+					<p>A pure java application. This game is based on a true story.</p>
+					<p>(Made in a hurry)</p>
+				</div>
+				
+				<a class="play_link" href="downloads/Defend_The_Train.jar">Download</a>
+			
 				<div class="play_video">
-					<a href="https://youtu.be/mGLpdRneWvc">Watch Demo in Browser</a>
+					<a href="https://www.youtube.com/watch?v=4m2plbIVZng">Watch Demo in Browser</a>
 				</div>
 			</div>
+
+			<!--4th Element-->
 			<div class="element">
 				<div class="image">
 					<img src="images/element_pics/renni_proj.PNG">
@@ -66,11 +278,14 @@
 					<p>Renaissance Game</p>
 				</div>
 				<div class="description">
+					<p>Version v0.1.2</p>
 					<p>A java.* game. Play as Raphael and fight through the plague in this Renaissance styled platformer.</p>
 				</div>
 				
-				<a class="play_link" href="downloads/Renassance%20v6.jar">Play by Download</a>
+				<a class="play_link" href="downloads/Renassance%20v6.jar">Download</a>
 			</div>
+			
+			<!--5th Element-->
 			<div class="element">
 				<div class="image">
 					<img src="images/element_pics/doppler_effect.PNG">
@@ -79,11 +294,14 @@
 					<p>2D Doppler Effect</p>
 				</div>
 				<div class="description">
+					<p>Version v0.0.4</p>
 					<p>A java.* applicaton that simulates the doppler effect.</p>
 				</div>
 				
-				<a class="play_link" href="downloads/Doppler_Effect.jar">Play by Download</a>
+				<a class="play_link" href="downloads/Doppler_Effect.jar">Download</a>
 			</div>
+			
+			<!--7th Element-->
 			<div class="element">
 				<div class="image">
 					<img src="images/element_pics/ascii_art%20.png">
@@ -92,41 +310,59 @@
 					<p>Ascii Art Generator</p>
 				</div>
 				<div class="description">
+					<p>Version v0.0.8</p>
 					<p>A java.* applicaton that converts an image into ascii characters which are written to a text file.</p>
+					<p>Not user friendly.</p>
 				</div>
 				
-				<a class="play_link" href="downloads/ascii_art%20.jar">Play by Download</a>
-			</div>
+				<a class="play_link" href="downloads/ascii_art%20.jar">Download</a>
+			</div>			
+			
+			<!--First Element-->
 			<div class="element">
 				<div class="image">
-					<img src="images/element_pics/wordBank.png">
+					<img src="images/element_pics/aslogo.png">
 				</div>
 				<div class="title">
-					<p>Word Bank</p>
+					<p>Ampersand Studio</p>
 				</div>
 				<div class="description">
-					<p>A word database randomly displayed in a JFrame as a JLable.</p>
-					<p>Download on the Google PlayStore.</p>
+					<p>Version v0.0.3</p>
+					<p>Build a custom anmation from any bitmap. Export as .gif</p>
 				</div>
 				
-				<a class="play_link" href="downloads/Word%20Bank.jar">Play by Download</a>
-				
-				<div class="play_video">
-					<a href="https://play.google.com/store/apps/details?id=com.diction.center.android&hl=en">Download App</a>
-				</div>
+				<a class="play_link" href="downloads/Ampersand%20Studio%20v0.0.3.jar">Download</a>
 			</div>
+			
+			<!--Third Element-->			
 			<div class="element">
 				<div class="image">
-					<img src="images/element_pics/lumber_jack.PNG">
+					<img src="images/element_pics/ps_epic.png">
 				</div>
 				<div class="title">
-					<p>Test Icon</p>
+					<p>Pascal's Triangle Calc</p>
 				</div>
 				<div class="description">
-					<p>This is a crappy Javascript application.</p>
+					<p>Version v0.0.5</p>
+					<p>Build and expand binomials with a special pyramid.</p>
 				</div>
-				<a class="play_link" href="pages/Lumber_Jack/index.html">Play in Browser</a>
+				
+				<a class="play_link" href="downloads/Pascals's%20Triangle.jar">Download</a>
+			</div>
 
+			<div class="element">
+				<div class="image">
+					<img src="images/element_pics/quadpic.PNG">
+				</div>
+				<div class="title">
+					<p>Quadratic Formula Calc</p>
+				</div>
+				<div class="description">
+					<p>Version v0.0.8</p>
+					<p>Graph and solve quadratics. This will also solve imaginary roots</p>
+				</div>
+				
+				<a class="play_link" href="downloads//Quadratic%20Calculator.jar">Download</a>
 			</div>
 		</div>
 		
