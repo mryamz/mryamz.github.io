@@ -34,6 +34,12 @@ p{
 	display: block;
 }
 
+#element_list .list_title {
+	font-size: 24px;
+	text-align: center;
+	padding-bottom: 19px;
+}
+
 #element_list .element {
     float: left;
     position: relative;
