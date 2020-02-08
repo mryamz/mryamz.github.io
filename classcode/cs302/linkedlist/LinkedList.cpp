@@ -55,34 +55,46 @@ void LinkedList<T>::add(const T & item, int index)
 template<class T>
 void LinkedList<T>::remove(int index)
 {
-	Node<T>* toRemove = getNode(index);
 
+	if (size == 0)
+		return;
+
+	if (index > size)
+		return;
+
+	Node<T>* toRemove = getNode(index);
+	//std::cout << "Item " << toRemove->item << " index " << index << std::endl;
+
+	// index = (size - 1) - index;
 	if (index == 0) {
+		//std::cout << "is first" << std::endl;
 		pfirst = getNode(1);
-		delete toRemove;
+		//delete toRemove;
+		size--;
 		return;
 	}
 
 	if (index == size - 1) {
+		//std::cout << "is last" << std::endl;
 		Node<T>* before_tail = getNode(size - 2);
-		before_tail->next = nullptr;
+		std::cout << before_tail << std::endl;
 		plast = before_tail;
-		delete toRemove;
+		//delete toRemove;
+		size--;
 		return;
 	}
 
-	Node<T>* before = getNode(index - 1);
+
+	Node<T>* before = getNode(index - 1); 
 	Node<T>* after = getNode(index + 1);
 
-	std::cout << "1) " << before << " " << after << std::endl;
-	before->next = after;
-	std::cout << "2) " << before << " " << after << std::endl;
 
-	delete toRemove;
+	// std::cout << "1) " << before << " " << after << std::endl;
+	after->next = before;
+	// std::cout << "2) " << before << " " << after << std::endl;
 
-
+	//delete toRemove;
 	size--;
-	
 }
 
 template<class T>
@@ -112,10 +124,17 @@ T LinkedList<T>::get(int index)
 template<class T>
 Node<T>* LinkedList<T>::getNode(int index)
 {
+
 	if (index > size)
 		return 0;
 
-	index = (size - 1) - index;
+/*	if (size == 2 && index == 1)
+		return plast;
+
+	if (size == 2 && index == 0)
+		return pfirst;
+*/
+	//index = (size - 1) - index;
 
 	Node<T>* current = pfirst;
 

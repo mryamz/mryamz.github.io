@@ -6,15 +6,25 @@
 void menu() {
 	bool isRunning = true;
 	LinkedList<int> list;
+	list.add(5);
+	list.add(6);
+	list.add(2);
+	list.add(9);
+	list.add(5);
 	list.add(1);
-	list.add(2); 
-	list.add(3);          
+	list.add(4);
+	list.add(1);  
+	list.add(3);
+	list.add(0);
+	list.remove(0);
+
 
 	char tick = 'a';    
 	while (isRunning) {
 		std::cout << "-------------------------" << std::endl;
 		std::cout << "-      Linked List      -" << std::endl;
 		std::cout << "-------------------------" << std::endl;
+		std::cout << list.toString() << std::endl;
 		std::cout << "press a) to add new item" << std::endl;
 		std::cout << "press b) to delete an item" << std::endl;
 		std::cout << "press c) to show list count" << std::endl;
@@ -23,20 +33,20 @@ void menu() {
 
 		char line[100];
 		std::cin >> line;
-		int rand_num = rand() % list.getSize();
+		int rand_num = list.getSize() > 0 ? rand() % list.getSize() : 0;
 
 		switch (line[0]) {
 		case 'a':
 			std::cout << "------------" << std::endl;
 			std::cout << "Linked List:" << std::endl;
-			std::cout << "Random Number: " << rand_num <<" has been added" << std::endl;
+			std::cout << "Random Number: " << rand_num <<" has been added..." << std::endl;
 			std::cout << "------------" << std::endl;
-			list.add(rand_num);
+			list.add(rand_num);  
 			break;
-		case 'b':
+		case 'b':  
 			std::cout << "------------" << std::endl;
 			std::cout << "Linked List:" << std::endl;
-			std::cout << "Removing Random Index: " << rand_num << std::endl;
+			std::cout << "Removing random index: [" << list.getSize() - 1 - rand_num << "]..." << std::endl;
 			std::cout << "------------" << std::endl;
 			list.remove(rand_num);
 			std::cout << std::endl;
@@ -69,6 +79,8 @@ void menu() {
 			std::cout << "Not an option" << std::endl;
 			break;
 		}
+
+
 	}
 }
 
