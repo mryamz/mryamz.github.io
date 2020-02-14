@@ -4,7 +4,7 @@
 #define __EXPRESSION_SOLVER_CPP__
 //tavikosheredcode
 
-#define DEBUG 1
+#define DEBUG 0
 
 
 ExpressionSolver::ExpressionSolver()
