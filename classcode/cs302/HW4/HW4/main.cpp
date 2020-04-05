@@ -1,3 +1,5 @@
+
+
 #include <iostream>
 #include "PriorityQueue.h"
 #include "Queue.h"
@@ -7,20 +9,16 @@
 int main() {
 	using namespace std;
 
-	Queue<int> q;
+	PriorityQueue<char> q;
+	 
+	q.insert('e', 97);
+	q.insert('b', 99);
+	q.insert('a', 100);
+	q.insert('c', 98 );
 
-	q.enque(5);
-	q.enque(55);
-	q.enque(58);
-	q.enque(54);
-	q.deque();
-	q.deque();
-
-	cout << "Queue Front : " << (q.front)->t << endl;
-
-	cout << "Queue Rear : " << (q.back)->t;
-
-
+	q.debugIO();
+	q.remove();
+	q.debugIO();
 
 
 }

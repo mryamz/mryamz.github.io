@@ -17,6 +17,8 @@ public:
 
 	void deque();
 
+	bool isEmpty();
+
 };
 
 #include "Queue.cpp"

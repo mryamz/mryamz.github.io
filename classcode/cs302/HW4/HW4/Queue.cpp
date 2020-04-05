@@ -7,7 +7,6 @@
 
 #include "Queue.h"
 
-#define null nullptr
 
 template<class T>
 Queue<T>::Queue()
@@ -48,6 +47,12 @@ void Queue<T>::deque()
 
 
     delete (value);
+}
+
+template<class T>
+bool Queue<T>::isEmpty()
+{
+    return front == null;
 }
 
 #endif // !__QUEUE_CPP__
