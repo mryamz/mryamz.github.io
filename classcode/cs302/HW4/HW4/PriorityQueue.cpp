@@ -22,12 +22,7 @@ void PriorityQueue<T>::insert(T t, int prio)
 
     Node<T>* iterator;
 
-    bool hasPriority = prio > front->priority;
-    if (hasPriority) {
-        new_info->next = front;
-        front = new_info;
-        return;
-    }
+  
     
     if (isEmpty()) {
         new_info->next = front;
@@ -36,12 +31,31 @@ void PriorityQueue<T>::insert(T t, int prio)
     }
 
 
+    bool hasPriority = prio < front->priority;
+    if (hasPriority) {
+        new_info->next = front;
+        front = new_info;
+        return;
+    }
+
     iterator = front;
-    while (iterator->next != null && iterator->next->priority > prio)
+    while (iterator->next != null && iterator->next->priority < prio)
         iterator = iterator->next;
 
     new_info->next = iterator->next;
     iterator->next = new_info;
+}
+
+template<class T>
+T PriorityQueue<T>::getPriority()
+{
+    return front->priority;
+}
+
+template<class T>
+T PriorityQueue<T>::getValue()
+{
+    return front->t;
 }
 
 template<class T>
@@ -70,32 +84,21 @@ template<class T>
 void PriorityQueue<T>::debugIO()
 {
     using namespace std;
+     
+        Node<T>* curr;
+        curr = front;
 
-        Node<T>* ptr;
+        if (isEmpty()) {
+            cout << "is empty\n";
+            return;
+        }
 
-        ptr = front;
-
-        if (front == null)
-
-            cout << "Queue is empty\n";
-
-        else
-
+        cout << "Debug Priority Queue:\n";
+        cout << "Arrival Time       Departure Time\n";
+        while (curr != null)
         {
-            cout << "Queue is :\n";
-
-            cout << "Priority       Item\n";
-
-            while (ptr != null)
-
-            {
-
-                cout << ptr->priority << "                 " << ptr->t << endl;
-
-                ptr = ptr->next;
-
-            }
-
+           cout << curr->priority << "                  " << curr->t << endl;
+           curr = curr->next;
     }
 }
 

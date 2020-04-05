@@ -1,2 +1,4 @@
 ﻿  main.cpp
+C:\Users\mryamz\Documents\GitHub\mryamz.github.io\classcode\cs302\HW4\HW4\main.cpp(22,9): warning C4101: 'arrivalTime': unreferenced local variable
+C:\Users\mryamz\Documents\GitHub\mryamz.github.io\classcode\cs302\HW4\HW4\main.cpp(22,22): warning C4101: 'transactionTime': unreferenced local variable
   HW4.vcxproj -> C:\Users\mryamz\Documents\GitHub\mryamz.github.io\classcode\cs302\HW4\HW4\Debug\HW4.exe

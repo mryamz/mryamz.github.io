@@ -13,6 +13,10 @@ public:
 
 	void insert(T t, int prio);
 
+	T getPriority();
+
+	T getValue();
+
 	T remove();
 
 	bool isEmpty();
