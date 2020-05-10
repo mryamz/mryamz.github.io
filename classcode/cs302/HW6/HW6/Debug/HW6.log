@@ -1,0 +1,8 @@
+﻿  HW6.cpp
+C:\Users\mryamz\Documents\GitHub\mryamz.github.io\classcode\cs302\HW6\HW6\HW6.cpp(13,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\mryamz\Documents\GitHub\mryamz.github.io\classcode\cs302\HW6\HW6\HW6.cpp(30,17): warning C4244: 'argument': conversion from 'float' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+  HW6.vcxproj -> C:\Users\mryamz\Documents\GitHub\mryamz.github.io\classcode\cs302\HW6\HW6\Debug\HW6.exe
