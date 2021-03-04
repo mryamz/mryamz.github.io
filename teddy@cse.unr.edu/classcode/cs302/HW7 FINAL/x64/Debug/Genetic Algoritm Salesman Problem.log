@@ -1,0 +1,10 @@
+﻿  main.cpp
+C:\Users\mryamz\Documents\GitHub\mryamz.github.io\classcode\cs302\HW7 FINAL\City.h(30,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\mryamz\Documents\GitHub\mryamz.github.io\classcode\cs302\HW7 FINAL\TourManager.h(63,36): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\mryamz\Documents\GitHub\mryamz.github.io\classcode\cs302\HW7 FINAL\Tour.h(82,35): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\mryamz\Documents\GitHub\mryamz.github.io\classcode\cs302\HW7 FINAL\GeneticAlgorithm.h(89,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\mryamz\Documents\GitHub\mryamz.github.io\classcode\cs302\HW7 FINAL\GeneticAlgorithm.h(90,10): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\mryamz\Documents\GitHub\mryamz.github.io\classcode\cs302\HW7 FINAL\GeneticAlgorithm.h(125,10): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\mryamz\Documents\GitHub\mryamz.github.io\classcode\cs302\HW7 FINAL\Population.h(63): warning C4172: returning address of local variable or temporary: mostfit
+C:\Users\mryamz\Documents\GitHub\mryamz.github.io\classcode\cs302\HW7 FINAL\main.cpp(17): warning C4715: 'getNameFromXY': not all control paths return a value
+  Genetic Algoritm Salesman Problem.vcxproj -> C:\Users\mryamz\Documents\GitHub\mryamz.github.io\classcode\cs302\HW7 FINAL\x64\Debug\Genetic Algoritm Salesman Problem.exe
